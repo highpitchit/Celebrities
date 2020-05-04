@@ -1,0 +1,20 @@
+<h1> Celebrities </h1>
+
+<table>
+    <thead>
+        <tr>
+        <th>Name</th>
+        <th>Notability</th>
+        </tr>
+    </thead>  
+
+    <tbody>
+        <% @celebs.each_with_index do |celab, index| %>
+            <tr>
+            <td><%= celab[:name] %></td>
+            <td><%= celab[:notability] %></td>
+            <td><%= link_to 'Show', show_path(index) %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
